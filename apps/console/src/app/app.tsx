@@ -1,15 +1,22 @@
-import styled from '@emotion/styled';
-import NxWelcome from './nx-welcome';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router';
 
-const StyledApp = styled.div`
-  // Your style here
-`;
+import { MantineProvider } from '@mantine/core';
+
+import { AppRouteResolver } from './AppRouteResolver';
+
+import { lightTheme } from '../themes/light/light.theme';
+import { store } from './_config/store/store.config';
 
 export function App() {
   return (
-    <StyledApp>
-      <NxWelcome title="console" />
-    </StyledApp>
+    <Provider store={store}>
+      <BrowserRouter>
+        <MantineProvider theme={lightTheme}>
+          <AppRouteResolver />
+        </MantineProvider>
+      </BrowserRouter>
+    </Provider>
   );
 }
 

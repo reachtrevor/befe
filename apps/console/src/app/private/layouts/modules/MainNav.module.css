@@ -1,0 +1,22 @@
+.mainLinks {
+  padding-left: calc(var(--mantine-spacing-md) - var(--mantine-spacing-xs));
+  padding-right: calc(var(--mantine-spacing-md) - var(--mantine-spacing-xs));
+  padding-bottom: var(--mantine-spacing-md);
+}
+
+.userButton {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+
+  &:hover {
+    background-color: light-dark(
+      var(--mantine-primary-color-0),
+      var(--mantine-primary-color-5)
+    );
+
+    color: light-dark(
+      var(--mantine-primary-color-5),
+      var(--mantine-primary-color-0)
+    );
+  }
+}
