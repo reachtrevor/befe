@@ -4,8 +4,8 @@
   padding-bottom: var(--mantine-spacing-md);
 }
 
-.userButton {
-  padding: 0.5rem 1rem;
+button.userButton {
+  padding: rem(8) rem(16);
   border-radius: 0.25rem;
 
   &:hover {

@@ -1,3 +1,5 @@
+import { useMemo } from 'react';
+
 import {
   AppShell,
   Avatar,
@@ -18,7 +20,6 @@ import {
 
 import { MainNavSection } from './MainNavSection';
 
-import { useMemo } from 'react';
 import classes from './MainNav.module.css';
 
 const sectionsDef: Record<string, any[]> = {
@@ -57,9 +58,9 @@ export function MainNav() {
           <Group>
             <Avatar size="md" color="bright-pink" />
             <Stack gap={0}>
-              <Text>Trevor Pierce</Text>
+              <Text>James</Text>
               <Text size="sm" c="dimmed">
-                trevor@gmail.com
+                james@gmail.com
               </Text>
             </Stack>
           </Group>
