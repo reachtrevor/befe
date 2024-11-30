@@ -1,14 +1,15 @@
+import { MantineProvider } from '@mantine/core';
+import '@mantine/core/styles.css';
+
 import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
-
+import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router';
 
-import { MantineProvider } from '@mantine/core';
-
-import { lightTheme } from './themes/light/light.theme';
-
-import '@mantine/core/styles.layer.css';
 import App from './app/app';
+
+import { store } from './app/_config/store/store.config';
+import { lightTheme } from './themes/light/light.theme';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -16,12 +17,12 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <StrictMode>
-    {/* <Provider store={store}> */}
-    <MantineProvider theme={lightTheme}>
+    <Provider store={store}>
       <BrowserRouter>
-        <App />
+        <MantineProvider theme={lightTheme}>
+          <App />
+        </MantineProvider>
       </BrowserRouter>
-    </MantineProvider>
-    {/* </Provider> */}
+    </Provider>
   </StrictMode>
 );
